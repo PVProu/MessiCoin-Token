@@ -49,6 +49,42 @@
 | `getBlacklistStatus()` | Public view of blacklist state                      |
 
 ---
+## 🧾 Code Details
+
+MessiCoin is built using Solidity 0.8.24 and follows the ERC-20 standard with additional features:
+
+### 🔐 Ownership & Access Control
+- Only the contract `owner` (deployer) can:
+  - Pause/unpause all transfers
+  - Blacklist/unblacklist addresses
+
+### 🚫 Blacklist Mechanism
+- The contract includes a blacklist system:
+  - `setBlackList(address, bool)` allows the owner to block specific addresses.
+  - Blacklisted addresses cannot send or receive tokens via `safeTransfer`.
+
+### ⏸️ Pausable
+- Using OpenZeppelin’s `Pausable`, the contract can pause or unpause token transfers globally in emergencies.
+
+### 🔥 Burn Functionality
+- Any user can burn their own tokens via `burnTokens(uint256)` to reduce circulating supply.
+
+### 🪙 Initial Token Distribution
+- Total supply: 100,000 tokens
+- Minted at deployment with the following split:
+  - 10% to `presaleWallet`
+  - 30% to `rewardWallet`
+  - 30% to `dexWallet`
+  - 25% to `teamWallet`
+  - 5% to `owner` (deployer)
+
+### ✅ Safe Transfer
+- Custom `safeTransfer(address, uint256)` ensures blacklist validation before executing transfers.
+
+### 🧱 Dependencies
+- [`@openzeppelin/contracts`](https://github.com/OpenZeppelin/openzeppelin-contracts):
+  - `ERC20`
+  - `Pausable`
 
 ## 🚀 Deployment Instructions
 
@@ -60,6 +96,7 @@
    - Team
 3. Deploy the contract.
 4. Interact via MetaMask, Remix UI, or a custom Web3 frontend.
+5. The deployer address (msg.sender) will receive 5% of the total supply and become the contract owner.
 
 ---
 
