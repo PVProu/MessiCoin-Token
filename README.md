@@ -1,6 +1,6 @@
 # MessiCoin (D10S)
 
-**MessiCoin** is a custom-built ERC20 token smart contract developed in Solidity using the OpenZeppelin library. Inspired by the legendary Lionel Messi, this token showcases advanced features such as controlled token distribution, blacklist enforcement, transfer pausing, and secure burning—all following industry best practices.
+**MessiCoin** is a custom-built ERC20 token smart contract developed in Solidity using the OpenZeppelin library. Inspired by the legendary Lionel Messi, this token showcases advanced features such as controlled token distribution, blacklist enforcement, transfer pausing, and secure burning, all following industry best practices.
 
 ---
 
@@ -65,10 +65,8 @@
 
 ## 👨‍💻 About the Author
 
-This project was built as part of my journey into Web3 and smart contract development. I'm passionate about combining **technology, creativity, and freedom**, and I'm actively exploring roles in blockchain, Web3, or fintech ecosystems.
+This project was built as part of my journey into Web3 and smart contract development. I'm passionate about combining **technology, creativity, and freedom**.
 
-> Let's connect!  
-If you'd like to test, audit, or collaborate, feel free to reach out via GitHub or LinkedIn.
 
 ---
 
